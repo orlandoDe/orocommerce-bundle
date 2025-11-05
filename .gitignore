@@ -1,0 +1,11 @@
+/vendor/
+/var/
+/node_modules/
+/public/bundles/
+/public/media/cache/
+/cache/
+/.env
+*.log
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,11 @@
+{% block _acme_stock_info_widget %}
+  {% set statusBlock = blocks.product_view_brand_inventory_status is defined ? blocks.product_view_brand_inventory_status : null %}
+  {% set statusHtml %}
+    {% if statusBlock %}{% apply spaceless %}{{ block_widget(statusBlock) }}{% endapply %}{% endif %}
+  {% endset %}
+
+  {% if statusHtml matches '/status-label--success/' and stock is defined and stock.available %}
+    <span aria-hidden="true" class="acme-stock-sep" style="margin:0 6px;opacity:.35">|</span>
+    <span class="status-label status-label--success">Available: {{ stock.formatted_quantity }} units</span>
+  {% endif %}
+{% endblock %}

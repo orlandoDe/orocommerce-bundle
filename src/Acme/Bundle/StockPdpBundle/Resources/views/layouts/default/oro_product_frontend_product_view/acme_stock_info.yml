@@ -1,0 +1,18 @@
+layout:
+  actions:
+    - '@setBlockTheme':
+        themes:
+          - '@AcmeStockPdp/layouts/default/imports/acme_stock_info/acme_stock_info.html.twig'
+          # If your Symfony version prefers the old style, either of these also work:
+          # - 'AcmeStockPdpBundle:layouts:default/imports/acme_stock_info/stock_info.html.twig'
+          # - '%kernel.project_dir%/src/Acme/Bundle/StockPdpBundle/Resources/views/layouts/default/imports/acme_stock_info/stock_info.html.twig'
+
+    - '@add':
+        id: acme_stock_info
+        parentId: product_view_headline_inventory_status_slot   # or product_view_primary_container
+        blockType: block
+        options:
+          vars:
+            stock: '=data["acme_stock_info"].getStockInfo(data["product_view_form"].product ?? data["product"])'
+          visible: '=!!(data["product_view_form"].product ?? data["product"])'
+          

@@ -1,0 +1,8 @@
+services:
+  acme_stock_pdp.layout.data_provider.stock:
+    class: Acme\Bundle\StockPdpBundle\Layout\DataProvider\StockDataProvider
+    arguments:
+      - '@oro_inventory.manager.inventory_quantity_manager'
+      - '@doctrine'
+    tags:
+      - { name: layout.data_provider, alias: acme_stock_info }

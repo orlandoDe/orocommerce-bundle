@@ -1,0 +1,19 @@
+{% block _acme_stock_info_widget %}
+    {% set product = data['product'].getProduct() %}
+    {% if product is defined and product is not null %}
+        {% set stockInfo = acme_stock_info.getStockInfo(product) %}
+        
+        <div class="acme-stock-info" style="padding: 12px 15px; margin: 10px 0; border-radius: 4px; {% if stockInfo.available %}background-color: #d4edda; border: 1px solid #c3e6cb;{% else %}background-color: #f8d7da; border: 1px solid #f5c6cb;{% endif %}">
+            {% if stockInfo.available %}
+                <div style="color: #155724; font-weight: 600; font-size: 15px;">
+                    <span>Available stock: </span>
+                    <strong style="font-size: 16px;">{{ stockInfo.formatted_quantity }} units</strong>
+                </div>
+            {% else %}
+                <div style="color: #721c24; font-weight: 600; font-size: 15px;">
+                    <strong>Out of stock</strong>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endblock %}
