@@ -141,9 +141,14 @@ If sample product images don’t appear, regenerate attachments:
 php bin/console oro:attachment:sync --env=dev
 ```
 
+---
+## Misc
+---
 Then reload your site at:
 
 👉 [http://localhost:8080](http://localhost:8080)
+
+Test the module -> [http://localhost:8080/lighting-products/_item/industrial-steel-handheld-flashlight](http://localhost:8080/lighting-products/_item/industrial-steel-handheld-flashlight)
 
 ---
 
