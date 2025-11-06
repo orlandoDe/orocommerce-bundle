@@ -116,6 +116,22 @@ php -d memory_limit=-1 bin/console oro:assets:build --env=dev
 ```
 
 ---
+##  Installation Steps in a already running Orocommerce
+---
+
+### **Installation instructions for running the bundle in another environment.**
+
+```bash
+composer clear-cache
+composer config repositories.orocommerce-bundle git https://github.com/orlandoDe/oro-pdp-qty-bundle.git
+composer require orlandode/orocommerce-stockpdp-bundle
+
+php bin/console cache:clear --env=dev
+```
+
+---
+## Misc
+---
 
 ## 🖼️ Fix missing product images (optional)
 
