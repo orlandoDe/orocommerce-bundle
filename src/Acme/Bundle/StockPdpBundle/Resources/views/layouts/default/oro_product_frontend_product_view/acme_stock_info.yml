@@ -3,9 +3,6 @@ layout:
     - '@setBlockTheme':
         themes:
           - '@AcmeStockPdp/layouts/default/imports/acme_stock_info/acme_stock_info.html.twig'
-          # If your Symfony version prefers the old style, either of these also work:
-          # - 'AcmeStockPdpBundle:layouts:default/imports/acme_stock_info/stock_info.html.twig'
-          # - '%kernel.project_dir%/src/Acme/Bundle/StockPdpBundle/Resources/views/layouts/default/imports/acme_stock_info/stock_info.html.twig'
 
     - '@add':
         id: acme_stock_info

@@ -38,7 +38,6 @@ class StockDataProvider
                 return ['available' => false, 'quantity' => 0, 'formatted_quantity' => '0'];
             }
 
-            // ✅ Pass InventoryLevel to the manager
             $quantity = $this->inventoryQuantityManager->getAvailableQuantity($inventoryLevel);
 
             return [
