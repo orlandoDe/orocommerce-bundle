@@ -142,7 +142,7 @@ php bin/console oro:attachment:sync --env=dev
 ```
 
 ---
-## Misc
+## Test
 ---
 Then reload your site at:
 
