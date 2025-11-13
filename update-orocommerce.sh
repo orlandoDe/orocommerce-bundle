@@ -17,7 +17,8 @@ echo
 # COPY FILES (override)
 # ======================
 echo "📂 Copying and overriding files..."
-rsync -avh --progress \
+rsync -ah --quiet \
+  --ignore-missing-args \
   --exclude "${EXCLUDE_LIST[@]}" \
   "$SOURCE_DIR"/ "$TARGET_DIR"/
 
