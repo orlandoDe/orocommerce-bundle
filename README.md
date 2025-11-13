@@ -78,6 +78,7 @@ Still inside the PHP container:
 ```bash
 rm -f composer.lock
 composer clear-cache
+chmod +x bin/console
 composer update --no-interaction --prefer-dist --optimize-autoloader
 ```
 
