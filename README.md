@@ -48,6 +48,7 @@ cd ..
 docker compose build
 docker compose up -d
 docker compose exec php bash
+git config --global --add safe.directory /var/www/html
 ```
 
 This will start:
